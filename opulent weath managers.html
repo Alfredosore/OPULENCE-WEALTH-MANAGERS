@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opulent wealth managers</title>
+    <style>
+        :root {
+            --primary-color: #f39c12;
+            --secondary-color: #34495e;
+            --text-color: #272121;
+            --light-bg: #aeecd4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: var(--secondary-color);
+            color: #ffffff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            float: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-left: 1rem;
+        }
+
+        nav ul li a {
+            color: #09cea3;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        #showcase {
+            background: url('nairobi7.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #0ac266;
+            padding-top: 11rem;
+        }
+
+        #showcase h1 {
+            font-size: 4rem;
+            margin-bottom: 4rem;
+            text-shadow: 2px 2px 4px rgba(12, 2, 2, 0.5);
+        }
+
+        #showcase p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+
+        section {
+            padding: 3rem 0;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .partner-list, .client-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .partner-item, .client-item {
+            background: var(--light-bg);
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem;
+            width: calc(25% - 2rem);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .partner-item:hover, .client-item:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        #contact {
+            background: var(--secondary-color);
+            color: #fff;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-item {
+            flex: 1;
+            margin: 1rem;
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        @media(max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            nav {
+                float: none;
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .partner-item, .client-item {
+                width: calc(50% - 2rem);
+            }
+
+            .contact-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">OPULENT WEALTH MANAGERS</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#partners">Services</a></li>
+                    <li><a href="#clients">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>OPULENT WEALTH MANAGERS</h1>
+            <p>Our commitment to your goals remain strong</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>PWC TOWER, WESTLANDS</p>
+                    <p>8TH FLOOR.</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p>+254 735 741 385</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>opulentwealthmanagers@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 OPULENT WEALTH MANAGERS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
